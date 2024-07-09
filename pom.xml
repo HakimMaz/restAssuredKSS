@@ -45,6 +45,12 @@
 			<version>7.10.2</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- Dependency for schema validator  -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>5.5.0</version>
+		</dependency>
 		<!-- Dependency for reporting  -->
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
