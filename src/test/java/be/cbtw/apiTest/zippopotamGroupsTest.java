@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 
-public class zippopotamTest {
+public class zippopotamGroupsTest {
 
     @Test
     public void validateListOfBookTest() {
@@ -38,7 +38,7 @@ public class zippopotamTest {
 
     }
 
-    @Test
+    @Test(groups = {"group1"})
     public void validateRandomUserUsingGPath() {
         given()
                 .when()
@@ -55,7 +55,7 @@ public class zippopotamTest {
                 .body("comments[1].user.name", equalTo("Michael Johnson"));
     }
 
-    @Test
+    @Test(groups = {"group1"})
     public void serviceWithAuthenticationTest() {
         given()
                 .auth()
@@ -68,7 +68,7 @@ public class zippopotamTest {
                 .statusCode(200);
     }
 
-    @Test
+    @Test(groups ={"group1"})
     public void serviceWithAuthenticationUsingPreemptiveTest() {
         given()
                 .auth()
@@ -100,7 +100,7 @@ public class zippopotamTest {
 //                .body("login", equalTo("your_github_username")); // Replace with your GitHub username
 //    }
 
-    @Test
+    @Test(groups = {"group2"})
     public void JsonSchemaValidationTest() {
         given()
                 .when()
@@ -113,14 +113,14 @@ public class zippopotamTest {
 
     }
 
-    @Test
+    @Test(groups = {"group2"})
     public void xmlPathTest(){
-       String responseApi= given()
+        String responseApi= given()
                 .accept(ContentType.XML)
                 .when()
                 .get("https://run.mocky.io/v3/42489e6b-edd0-460f-b075-ea3e9d9a282d")
                 .thenReturn()
-               .toString();
+                .asString();
 
         XmlPath responseXmlPath =new  XmlPath(responseApi);
         Assert.assertEquals(responseXmlPath.getString("root.posts.id"),"1");

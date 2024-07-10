@@ -4,5 +4,11 @@
         <classes>
             <class name="be.cbtw.apiTest.zippopotamTest"/>
         </classes>
+        <groups>
+            <run>
+                <include name="group1"/>
+            </run>
+        </groups>
     </test>
+
 </suite>
