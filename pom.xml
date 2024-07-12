@@ -45,6 +45,7 @@
 			<version>7.10.2</version>
 			<scope>test</scope>
 		</dependency>
+
 		<!-- Dependency for schema validator  -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>

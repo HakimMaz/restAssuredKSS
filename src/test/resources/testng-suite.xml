@@ -3,10 +3,12 @@
     <test name="HelloWorldTest" preserve-order="true" thread-count="10" parallel="methods">
         <classes>
             <class name="be.cbtw.apiTest.zippopotamTest"/>
+            <class name="be.cbtw.apiTest.zippopotamGroupsTest"/>
         </classes>
         <groups>
             <run>
-                <include name="group1"/>
+                <include name="group0"/>
+                <include name="group0"/>
             </run>
         </groups>
     </test>
