@@ -55,8 +55,7 @@ public class zippopotamTest {
                 .statusCode(200)
                 .body("pages", equalTo(234));
     }
-
-    @Test
+    @Test(groups = {"group0"})
     public void validateRandomUserUsingGPath() {
         given()
                 .when()
